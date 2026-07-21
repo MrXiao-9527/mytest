@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>CNKI AI 个性化需求原型</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;600;700&family=Noto+Serif+SC:wght@600&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --bg: #f3f7fb;
+      --ink: #152033;
+      --muted: #5b6b80;
+      --line: #d7e2ef;
+      --blue: #2f6fed;
+      --panel: #ffffff;
+      --soft: #e8f1ff;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      font-family: "Noto Sans SC", sans-serif;
+      color: var(--ink);
+      background:
+        radial-gradient(1200px 500px at 10% -10%, #dcecff 0%, transparent 55%),
+        radial-gradient(900px 400px at 90% 0%, #eef5ff 0%, transparent 50%),
+        var(--bg);
+      line-height: 1.6;
+    }
+
+    .wrap {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 48px 24px 80px;
+    }
+
+    header {
+      margin-bottom: 40px;
+    }
+
+    header h1 {
+      font-family: "Noto Serif SC", serif;
+      font-size: clamp(1.8rem, 3vw, 2.4rem);
+      margin: 0 0 12px;
+      letter-spacing: 0.02em;
+    }
+
+    header p {
+      margin: 0;
+      color: var(--muted);
+      max-width: 720px;
+    }
+
+    nav {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 24px;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: var(--blue);
+      background: var(--soft);
+      border: 1px solid #c9ddff;
+      padding: 8px 12px;
+      border-radius: 8px;
+      font-size: 0.92rem;
+      font-weight: 500;
+    }
+
+    section {
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: 16px;
+      padding: 28px;
+      margin-bottom: 28px;
+      box-shadow: 0 10px 30px rgba(30, 60, 110, 0.04);
+    }
+
+    .tag {
+      display: inline-block;
+      font-size: 0.78rem;
+      font-weight: 600;
+      color: var(--blue);
+      background: var(--soft);
+      padding: 4px 10px;
+      border-radius: 999px;
+      margin-bottom: 10px;
+    }
+
+    h2 {
+      margin: 0 0 8px;
+      font-size: 1.35rem;
+    }
+
+    .desc {
+      color: var(--muted);
+      margin: 0 0 20px;
+      font-size: 0.95rem;
+    }
+
+    .points {
+      margin: 0 0 22px;
+      padding-left: 18px;
+      color: #314357;
+      font-size: 0.92rem;
+    }
+
+    .points li { margin-bottom: 6px; }
+
+    .gallery {
+      display: grid;
+      gap: 20px;
+    }
+
+    figure {
+      margin: 0;
+    }
+
+    figure img {
+      width: 100%;
+      border-radius: 12px;
+      border: 1px solid var(--line);
+      background: #fff;
+      display: block;
+    }
+
+    figcaption {
+      margin-top: 10px;
+      font-size: 0.9rem;
+      color: var(--muted);
+    }
+
+    figcaption strong {
+      color: var(--ink);
+      font-weight: 600;
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <h1>CNKI AI 个性化需求原型</h1>
+      <p>基于现有问答首页结构，按五项机构个性化需求绘制高保真页面原型，展示从身份绑定、校本可控生成、双栏溯源、实体引导到 AI 伴读的完整终端闭环。</p>
+      <nav>
+        <a href="#req1">（一）身份互认与专属看板</a>
+        <a href="#req2">（二）文献设置</a>
+        <a href="#req3">（三）双栏溯源</a>
+        <a href="#req4">（四）实体引导</a>
+        <a href="#req5">（五）AI 伴读</a>
+      </nav>
+    </header>
+
+    <section id="req1">
+      <div class="tag">需求一 · 2 张</div>
+      <h2>智能身份互认与「本校专属」服务入口</h2>
+      <p class="desc">校园网 IP 自动绑定；校外登录后一键关联机构账号；主页切换为图书馆定制的本校学术发现 Dashboard。</p>
+      <ul class="points">
+        <li>校内访问：IP 探测完成机构身份绑定，无感解锁专属权益</li>
+        <li>校外访问：个人知网账号一键关联本校机构账号</li>
+        <li>登录后主页展示学者成果、最新学位论文、重点研究趋势</li>
+      </ul>
+      <div class="gallery">
+        <figure>
+          <img src="images/req1-identity-bind.png" alt="校外一键关联本校机构账号" />
+          <figcaption><strong>图 1-1</strong> 校外访问时的机构账号关联弹层：一键绑定并解锁学校专属权益。</figcaption>
+        </figure>
+        <figure>
+          <img src="images/req1-school-dashboard.png" alt="本校学术发现专属 Dashboard" />
+          <figcaption><strong>图 1-2</strong> 绑定后的「本校学术发现专属 Dashboard」：学者成果 / 学位论文 / 研究趋势。</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section id="req2">
+      <div class="tag">需求二 · 1 张</div>
+      <h2>主动式「文献设置」：可控范围内的生成式解答</h2>
+      <p class="desc">在输入区提供「文献设置 / 我的知识库」，让用户主动区分公有知识与本校特色资源，并收缩检索边界。</p>
+      <ul class="points">
+        <li>输入框下方打开文献设置面板</li>
+        <li>可勾选本校 IR、特藏文献库、院系专属语料库</li>
+        <li>勾选后模型仅在校本范围内聚类与可控生成</li>
+      </ul>
+      <div class="gallery">
+        <figure>
+          <img src="images/req2-literature-settings.png" alt="文献设置面板" />
+          <figcaption><strong>图 2-1</strong> 「文献设置」面板：一键限定本校库源，明确公有知识与校本资源边界。</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section id="req3">
+      <div class="tag">需求三 · 2 张</div>
+      <h2>双栏式「学术溯源模式」：打破信息黑箱</h2>
+      <p class="desc">左栏可信增强回答 + 右栏精准溯源文献；点击角标联动高亮，并可一键跳转 PDF 原文章节。</p>
+      <ul class="points">
+        <li>左栏结论带本校标识引用角标 [1][2]</li>
+        <li>悬停/点击角标时右栏卡片即时高亮</li>
+        <li>「精准溯源」打开 PDF 并高亮对应段落/图表</li>
+      </ul>
+      <div class="gallery">
+        <figure>
+          <img src="images/req3-dual-column-trace.png" alt="双栏学术溯源界面" />
+          <figcaption><strong>图 3-1</strong> 双栏溯源：左答右源，角标与文献卡片联动高亮。</figcaption>
+        </figure>
+        <figure>
+          <img src="images/req3-pdf-source-highlight.png" alt="PDF 精准溯源高亮" />
+          <figcaption><strong>图 3-2</strong> 一键原文章节回溯：PDF 解析视窗自动高亮答案所依据的段落。</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section id="req4">
+      <div class="tag">需求四 · 2 张</div>
+      <h2>学术实体引导：从字面检索到知识导航</h2>
+      <p class="desc">输入导师、实验室、特藏名称时弹出规范实体推荐；选择后直接生成智能学者画像，而非枯燥结果列表。</p>
+      <ul class="points">
+        <li>智能 Prompt Guide：作者 / 机构 / 特藏实体推荐</li>
+        <li>一键进入学者画像：发表脉络、词云、基金、合作网络</li>
+      </ul>
+      <div class="gallery">
+        <figure>
+          <img src="images/req4-entity-prompt-guide.png" alt="智能实体推荐列表" />
+          <figcaption><strong>图 4-1</strong> 搜索框实体引导：键入导师/实验室名称时弹出规范推荐列表。</figcaption>
+        </figure>
+        <figure>
+          <img src="images/req4-scholar-portrait.png" alt="智能学者画像" />
+          <figcaption><strong>图 4-2</strong> 智能学者画像：将本校 IR 记录转化为发表脉络与合作网络发现。</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section id="req5">
+      <div class="tag">需求五 · 1 张</div>
+      <h2>AI 文献伴读：本地特藏的主动研读工作流</h2>
+      <p class="desc">打开本校 IR 论文或特藏古籍后进入伴读空间：右侧 AI Summary、划词追问，研读记录回流个人中心。</p>
+      <ul class="points">
+        <li>右侧常驻 AI 伴读助手，一键生成大纲与核心贡献</li>
+        <li>划词选定公式/释义后发起追问</li>
+        <li>交互记录保存至个人 Dashboard，打通发现—研读—管理闭环</li>
+      </ul>
+      <div class="gallery">
+        <figure>
+          <img src="images/req5-ai-companion-reading.png" alt="AI 文献伴读空间" />
+          <figcaption><strong>图 5-1</strong> AI 伴读空间：正文划词追问 + 右侧 Summary / 伴读对话。</figcaption>
+        </figure>
+      </div>
+    </section>
+  </div>
+</body>
+</html>
