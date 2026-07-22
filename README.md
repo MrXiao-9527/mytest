@@ -1,15 +1,13 @@
-# CNKI AI 个性化需求原型
+# CNKI AI Personalized Prototypes
 
-本仓库包含 CNKI AI / 华知文思机构个性化五项需求的高保真页面原型。
+High-fidelity page mockups for five campus personalization features.
 
-## 快速预览
+## Preview
 
-打开 [`prototypes/index.html`](prototypes/index.html)，或：
+Open [`prototypes/index.html`](prototypes/index.html), or:
 
 ```bash
 python3 -m http.server 8080 --directory prototypes
 ```
 
-浏览器访问 `http://localhost:8080`。
-
-详细说明见 [`prototypes/README.md`](prototypes/README.md)。
+See [`prototypes/README.md`](prototypes/README.md) for the full screen list.

@@ -1,15 +1,15 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>CNKI AI 个性化需求原型</title>
+  <title>CNKI AI Personalized Prototypes</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;600;700&family=Noto+Serif+SC:wght@600&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Serif:wght@600&display=swap" rel="stylesheet" />
   <style>
     :root {
-      --bg: #f3f7fb;
+      --bg: #f5f8fc;
       --ink: #152033;
       --muted: #5b6b80;
       --line: #d7e2ef;
@@ -22,11 +22,11 @@
 
     body {
       margin: 0;
-      font-family: "Noto Sans SC", sans-serif;
+      font-family: "IBM Plex Sans", sans-serif;
       color: var(--ink);
       background:
-        radial-gradient(1200px 500px at 10% -10%, #dcecff 0%, transparent 55%),
-        radial-gradient(900px 400px at 90% 0%, #eef5ff 0%, transparent 50%),
+        radial-gradient(1100px 480px at 8% -12%, #dcecff 0%, transparent 55%),
+        radial-gradient(900px 420px at 92% 0%, #eef5ff 0%, transparent 50%),
         var(--bg);
       line-height: 1.6;
     }
@@ -37,15 +37,12 @@
       padding: 48px 24px 80px;
     }
 
-    header {
-      margin-bottom: 40px;
-    }
+    header { margin-bottom: 40px; }
 
     header h1 {
-      font-family: "Noto Serif SC", serif;
+      font-family: "IBM Plex Serif", serif;
       font-size: clamp(1.8rem, 3vw, 2.4rem);
       margin: 0 0 12px;
-      letter-spacing: 0.02em;
     }
 
     header p {
@@ -112,14 +109,9 @@
 
     .points li { margin-bottom: 6px; }
 
-    .gallery {
-      display: grid;
-      gap: 20px;
-    }
+    .gallery { display: grid; gap: 20px; }
 
-    figure {
-      margin: 0;
-    }
+    figure { margin: 0; }
 
     figure img {
       width: 100%;
@@ -144,109 +136,109 @@
 <body>
   <div class="wrap">
     <header>
-      <h1>CNKI AI 个性化需求原型</h1>
-      <p>基于现有问答首页结构，按五项机构个性化需求绘制高保真页面原型，展示从身份绑定、校本可控生成、双栏溯源、实体引导到 AI 伴读的完整终端闭环。</p>
+      <h1>CNKI AI Personalized Prototypes</h1>
+      <p>White-and-blue, international-style mockups for five campus personalization features—from identity linking and source-scoped answers to dual-column tracing, entity guidance, and AI reading.</p>
       <nav>
-        <a href="#req1">（一）身份互认与专属看板</a>
-        <a href="#req2">（二）文献设置</a>
-        <a href="#req3">（三）双栏溯源</a>
-        <a href="#req4">（四）实体引导</a>
-        <a href="#req5">（五）AI 伴读</a>
+        <a href="#req1">1. Identity &amp; Dashboard</a>
+        <a href="#req2">2. Source Settings</a>
+        <a href="#req3">3. Source Tracing</a>
+        <a href="#req4">4. Entity Guidance</a>
+        <a href="#req5">5. AI Reading</a>
       </nav>
     </header>
 
     <section id="req1">
-      <div class="tag">需求一 · 2 张</div>
-      <h2>智能身份互认与「本校专属」服务入口</h2>
-      <p class="desc">校园网 IP 自动绑定；校外登录后一键关联机构账号；主页切换为图书馆定制的本校学术发现 Dashboard。</p>
+      <div class="tag">Requirement 1 · 2 screens</div>
+      <h2>Campus identity &amp; school dashboard</h2>
+      <p class="desc">Auto-link on campus IP; one-tap institution link off campus; home becomes a school discovery dashboard.</p>
       <ul class="points">
-        <li>校内访问：IP 探测完成机构身份绑定，无感解锁专属权益</li>
-        <li>校外访问：个人知网账号一键关联本校机构账号</li>
-        <li>登录后主页展示学者成果、最新学位论文、重点研究趋势</li>
+        <li>On campus: IP detects and binds the institution</li>
+        <li>Off campus: link your CNKI account once</li>
+        <li>Dashboard shows faculty papers, new theses, and research trends</li>
       </ul>
       <div class="gallery">
         <figure>
-          <img src="images/req1-identity-bind.png" alt="校外一键关联本校机构账号" />
-          <figcaption><strong>图 1-1</strong> 校外访问时的机构账号关联弹层：一键绑定并解锁学校专属权益。</figcaption>
+          <img src="images/req1-identity-bind.png" alt="Link institution account" />
+          <figcaption><strong>1-1</strong> Off-campus modal: link your institution account in one step.</figcaption>
         </figure>
         <figure>
-          <img src="images/req1-school-dashboard.png" alt="本校学术发现专属 Dashboard" />
-          <figcaption><strong>图 1-2</strong> 绑定后的「本校学术发现专属 Dashboard」：学者成果 / 学位论文 / 研究趋势。</figcaption>
+          <img src="images/req1-school-dashboard.png" alt="School discovery dashboard" />
+          <figcaption><strong>1-2</strong> School Discovery Dashboard with IP auto-link notice.</figcaption>
         </figure>
       </div>
     </section>
 
     <section id="req2">
-      <div class="tag">需求二 · 1 张</div>
-      <h2>主动式「文献设置」：可控范围内的生成式解答</h2>
-      <p class="desc">在输入区提供「文献设置 / 我的知识库」，让用户主动区分公有知识与本校特色资源，并收缩检索边界。</p>
+      <div class="tag">Requirement 2 · 1 screen</div>
+      <h2>Source settings for scoped answers</h2>
+      <p class="desc">Let users choose campus sources before asking, so generation stays within selected collections.</p>
       <ul class="points">
-        <li>输入框下方打开文献设置面板</li>
-        <li>可勾选本校 IR、特藏文献库、院系专属语料库</li>
-        <li>勾选后模型仅在校本范围内聚类与可控生成</li>
+        <li>Open Source Settings under the input</li>
+        <li>Toggle IR, Special Collections, Department Corpus</li>
+        <li>Model retrieval shrinks to the selected campus scope</li>
       </ul>
       <div class="gallery">
         <figure>
-          <img src="images/req2-literature-settings.png" alt="文献设置面板" />
-          <figcaption><strong>图 2-1</strong> 「文献设置」面板：一键限定本校库源，明确公有知识与校本资源边界。</figcaption>
+          <img src="images/req2-literature-settings.png" alt="Source settings panel" />
+          <figcaption><strong>2-1</strong> Source Settings panel: open knowledge vs campus sources.</figcaption>
         </figure>
       </div>
     </section>
 
     <section id="req3">
-      <div class="tag">需求三 · 2 张</div>
-      <h2>双栏式「学术溯源模式」：打破信息黑箱</h2>
-      <p class="desc">左栏可信增强回答 + 右栏精准溯源文献；点击角标联动高亮，并可一键跳转 PDF 原文章节。</p>
+      <div class="tag">Requirement 3 · 2 screens</div>
+      <h2>Dual-column source tracing</h2>
+      <p class="desc">Grounded answer on the left; matching source cards on the right; jump to the exact PDF passage.</p>
       <ul class="points">
-        <li>左栏结论带本校标识引用角标 [1][2]</li>
-        <li>悬停/点击角标时右栏卡片即时高亮</li>
-        <li>「精准溯源」打开 PDF 并高亮对应段落/图表</li>
+        <li>Citations with school markers in the answer</li>
+        <li>Hover/click a marker to highlight the source card</li>
+        <li>Open Source jumps to the cited paragraph</li>
       </ul>
       <div class="gallery">
         <figure>
-          <img src="images/req3-dual-column-trace.png" alt="双栏学术溯源界面" />
-          <figcaption><strong>图 3-1</strong> 双栏溯源：左答右源，角标与文献卡片联动高亮。</figcaption>
+          <img src="images/req3-dual-column-trace.png" alt="Dual-column source tracing" />
+          <figcaption><strong>3-1</strong> Grounded Answer + Sources, with citation [2] linked.</figcaption>
         </figure>
         <figure>
-          <img src="images/req3-pdf-source-highlight.png" alt="PDF 精准溯源高亮" />
-          <figcaption><strong>图 3-2</strong> 一键原文章节回溯：PDF 解析视窗自动高亮答案所依据的段落。</figcaption>
+          <img src="images/req3-pdf-source-highlight.png" alt="Exact PDF source highlight" />
+          <figcaption><strong>3-2</strong> Exact Source view: PDF passage highlighted for citation [2].</figcaption>
         </figure>
       </div>
     </section>
 
     <section id="req4">
-      <div class="tag">需求四 · 2 张</div>
-      <h2>学术实体引导：从字面检索到知识导航</h2>
-      <p class="desc">输入导师、实验室、特藏名称时弹出规范实体推荐；选择后直接生成智能学者画像，而非枯燥结果列表。</p>
+      <div class="tag">Requirement 4 · 2 screens</div>
+      <h2>Entity guidance &amp; scholar profile</h2>
+      <p class="desc">Suggest people, labs, and collections as users type; open a rich scholar profile instead of a flat result list.</p>
       <ul class="points">
-        <li>智能 Prompt Guide：作者 / 机构 / 特藏实体推荐</li>
-        <li>一键进入学者画像：发表脉络、词云、基金、合作网络</li>
+        <li>Prompt guide for authors, labs, and collections</li>
+        <li>Scholar profile: timeline, keywords, grants, collaboration map</li>
       </ul>
       <div class="gallery">
         <figure>
-          <img src="images/req4-entity-prompt-guide.png" alt="智能实体推荐列表" />
-          <figcaption><strong>图 4-1</strong> 搜索框实体引导：键入导师/实验室名称时弹出规范推荐列表。</figcaption>
+          <img src="images/req4-entity-prompt-guide.png" alt="Suggested entities" />
+          <figcaption><strong>4-1</strong> Suggested entities while typing a name or lab.</figcaption>
         </figure>
         <figure>
-          <img src="images/req4-scholar-portrait.png" alt="智能学者画像" />
-          <figcaption><strong>图 4-2</strong> 智能学者画像：将本校 IR 记录转化为发表脉络与合作网络发现。</figcaption>
+          <img src="images/req4-scholar-portrait.png" alt="Scholar profile" />
+          <figcaption><strong>4-2</strong> Scholar Profile built from campus IR records.</figcaption>
         </figure>
       </div>
     </section>
 
     <section id="req5">
-      <div class="tag">需求五 · 1 张</div>
-      <h2>AI 文献伴读：本地特藏的主动研读工作流</h2>
-      <p class="desc">打开本校 IR 论文或特藏古籍后进入伴读空间：右侧 AI Summary、划词追问，研读记录回流个人中心。</p>
+      <div class="tag">Requirement 5 · 1 screen</div>
+      <h2>AI reading companion</h2>
+      <p class="desc">Read campus theses or special collections with a persistent assistant for summary and follow-ups.</p>
       <ul class="points">
-        <li>右侧常驻 AI 伴读助手，一键生成大纲与核心贡献</li>
-        <li>划词选定公式/释义后发起追问</li>
-        <li>交互记录保存至个人 Dashboard，打通发现—研读—管理闭环</li>
+        <li>Right rail: AI Summary and outline</li>
+        <li>Select text and Ask for context-aware follow-ups</li>
+        <li>Sessions save to the personal dashboard</li>
       </ul>
       <div class="gallery">
         <figure>
-          <img src="images/req5-ai-companion-reading.png" alt="AI 文献伴读空间" />
-          <figcaption><strong>图 5-1</strong> AI 伴读空间：正文划词追问 + 右侧 Summary / 伴读对话。</figcaption>
+          <img src="images/req5-ai-companion-reading.png" alt="AI reading companion" />
+          <figcaption><strong>5-1</strong> Reading Assistant with select-to-ask and AI Summary.</figcaption>
         </figure>
       </div>
     </section>
