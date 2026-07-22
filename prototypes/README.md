@@ -1,6 +1,13 @@
 # CNKI AI Personalized Prototypes
 
-High-fidelity UI mockups for five campus personalization features. Design system: white/blue international style, light nav/header (no dark chrome), concise English copy.
+High-fidelity UI mockups for five campus personalization features.
+
+Design system:
+- Logo: **CNKI** (black) + **AI** (blue)
+- Header (right): Guide · Language · Account
+- Left nav: Q&A · AI Reading · Intelligent Writing · Intelligent Agents · Deep Research · Bibliometric Analysis · Literature Review · Intelligent Translation · My Space
+- Institution example: **CNKI University** (fictional data)
+- Style: white/blue, light chrome, concise English
 
 ## Preview
 
