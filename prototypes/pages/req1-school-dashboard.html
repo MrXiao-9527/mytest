@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>CNKI AI · School Dashboard</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../css/app.css" />
+</head>
+<body data-active="qa">
+  <div class="app" id="app"></div>
+  <div id="page" hidden>
+    <div class="toast">Campus IP linked CNKI University automatically</div>
+    <div style="display:flex;justify-content:space-between;align-items:flex-end;gap:16px;">
+      <div>
+        <h1 class="h1">Hi, I'm CNKI AI</h1>
+        <p class="sub">Your School Discovery Dashboard · CNKI University</p>
+      </div>
+      <div class="chip"><span class="school-badge"><span class="mark">C</span></span> CNKI University · Linked</div>
+    </div>
+
+    <div class="grid-3">
+      <section class="panel card">
+        <h3>Latest Faculty Publications</h3>
+        <ul class="list">
+          <li><strong>Wei Zhang</strong> — A Hybrid Model for Urban Sustainability Assessment<br><span class="muted">Journal of Materials Science · May 2025</span></li>
+          <li><strong>Li Chen</strong> — Cross-Domain Transfer in Campus Knowledge Graphs<br><span class="muted">CNKI University Press · Apr 2025</span></li>
+          <li><strong>Ming Zhao</strong> — Low-Carbon Pathways for Smart Campuses<br><span class="muted">Energy Policy Review · Mar 2025</span></li>
+        </ul>
+      </section>
+      <section class="panel card">
+        <h3>New Theses</h3>
+        <ul class="list">
+          <li>Digital Economy and Regional Innovation Capacity<br><span class="muted">PhD · School of Management · 2025-05-12</span></li>
+          <li>Entity Linking for Institutional Repositories<br><span class="muted">Master · Computer Science · 2025-05-08</span></li>
+          <li>Special Collections and AI-Assisted Reading<br><span class="muted">Master · Library Science · 2025-04-30</span></li>
+        </ul>
+      </section>
+      <section class="panel card">
+        <h3>Research Trends</h3>
+        <div>
+          <span class="tag">Artificial Intelligence</span>
+          <span class="tag">New Energy Materials</span>
+          <span class="tag">Digital Transformation</span>
+          <span class="tag">Public Health</span>
+          <span class="tag">Smart Education</span>
+        </div>
+      </section>
+    </div>
+
+    <div class="ask-bar">
+      <input value="" placeholder="Ask anything about CNKI University..." readonly />
+      <button class="btn">Ask</button>
+    </div>
+  </div>
+  <script src="../js/shell.js"></script>
+</body>
+</html>

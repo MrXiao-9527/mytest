@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>CNKI AI · Source Settings</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../css/app.css" />
+</head>
+<body data-active="qa">
+  <div class="app" id="app"></div>
+  <div id="page" hidden>
+    <div class="center-stage" style="padding-top:48px;">
+      <h1 class="h1" style="text-align:center;">Ask a research question</h1>
+      <p class="sub" style="text-align:center;margin-bottom:20px;">Scope answers to open knowledge or CNKI University campus sources.</p>
+
+      <div class="ask-bar">
+        <input placeholder="Ask a research question" readonly />
+        <button class="btn">Ask</button>
+      </div>
+
+      <section class="panel settings">
+        <div style="display:flex;gap:18px;border-bottom:1px solid var(--line);margin-bottom:14px;">
+          <div style="padding-bottom:10px;border-bottom:2px solid var(--blue);color:var(--blue);font-weight:600;font-size:14px;">Source Settings</div>
+          <div style="padding-bottom:10px;color:var(--muted);font-weight:500;font-size:14px;">My Library</div>
+        </div>
+        <p class="sub" style="margin-bottom:10px;">Answers stay within your selected campus sources.</p>
+        <label class="check"><input type="checkbox" checked disabled /> Institutional Repository (IR)</label>
+        <label class="check"><input type="checkbox" checked disabled /> Special Collections</label>
+        <label class="check"><input type="checkbox" disabled /> Department Corpus</label>
+        <div style="margin-top:14px;padding:12px;border-radius:10px;background:var(--blue-soft);font-size:13px;color:#27406b;">
+          <strong>Open knowledge</strong> covers broad CNKI content.
+          <strong>Campus sources</strong> focus on CNKI University IR and collections.
+        </div>
+      </section>
+    </div>
+  </div>
+  <script src="../js/shell.js"></script>
+</body>
+</html>

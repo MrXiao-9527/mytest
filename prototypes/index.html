@@ -17,47 +17,25 @@
       --panel: #ffffff;
       --soft: #e8f1ff;
     }
-
     * { box-sizing: border-box; }
-
     body {
       margin: 0;
       font-family: "IBM Plex Sans", sans-serif;
       color: var(--ink);
       background:
         radial-gradient(1100px 480px at 8% -12%, #dcecff 0%, transparent 55%),
-        radial-gradient(900px 420px at 92% 0%, #eef5ff 0%, transparent 50%),
         var(--bg);
       line-height: 1.6;
     }
-
-    .wrap {
-      max-width: 1100px;
-      margin: 0 auto;
-      padding: 48px 24px 80px;
-    }
-
+    .wrap { max-width: 1100px; margin: 0 auto; padding: 48px 24px 80px; }
     header { margin-bottom: 40px; }
-
     header h1 {
       font-family: "IBM Plex Serif", serif;
       font-size: clamp(1.8rem, 3vw, 2.4rem);
       margin: 0 0 12px;
     }
-
-    header p {
-      margin: 0;
-      color: var(--muted);
-      max-width: 720px;
-    }
-
-    nav {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 10px;
-      margin-top: 24px;
-    }
-
+    header p { margin: 0; color: var(--muted); max-width: 760px; }
+    nav { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 24px; }
     nav a {
       text-decoration: none;
       color: var(--blue);
@@ -68,7 +46,6 @@
       font-size: 0.92rem;
       font-weight: 500;
     }
-
     section {
       background: var(--panel);
       border: 1px solid var(--line);
@@ -77,7 +54,6 @@
       margin-bottom: 28px;
       box-shadow: 0 10px 30px rgba(30, 60, 110, 0.04);
     }
-
     .tag {
       display: inline-block;
       font-size: 0.78rem;
@@ -88,31 +64,12 @@
       border-radius: 999px;
       margin-bottom: 10px;
     }
-
-    h2 {
-      margin: 0 0 8px;
-      font-size: 1.35rem;
-    }
-
-    .desc {
-      color: var(--muted);
-      margin: 0 0 20px;
-      font-size: 0.95rem;
-    }
-
-    .points {
-      margin: 0 0 22px;
-      padding-left: 18px;
-      color: #314357;
-      font-size: 0.92rem;
-    }
-
-    .points li { margin-bottom: 6px; }
-
+    h2 { margin: 0 0 8px; font-size: 1.35rem; }
+    .desc { color: var(--muted); margin: 0 0 12px; font-size: 0.95rem; }
+    .links { margin: 0 0 18px; font-size: 0.9rem; }
+    .links a { margin-right: 12px; }
     .gallery { display: grid; gap: 20px; }
-
     figure { margin: 0; }
-
     figure img {
       width: 100%;
       border-radius: 12px;
@@ -120,24 +77,21 @@
       background: #fff;
       display: block;
     }
-
-    figcaption {
-      margin-top: 10px;
-      font-size: 0.9rem;
-      color: var(--muted);
-    }
-
-    figcaption strong {
-      color: var(--ink);
-      font-weight: 600;
-    }
+    figcaption { margin-top: 10px; font-size: 0.9rem; color: var(--muted); }
+    figcaption strong { color: var(--ink); font-weight: 600; }
+    code { font-size: 0.9em; }
   </style>
 </head>
 <body>
   <div class="wrap">
     <header>
       <h1>CNKI AI Personalized Prototypes</h1>
-      <p>White-and-blue mockups with unified chrome: logo <strong>CNKI</strong><span style="color:#2f6fed">AI</span>, header Guide / Language / Account, shared left nav, and fictional <strong>CNKI University</strong> data.</p>
+      <p>
+        Screens are rendered from a shared HTML shell so every page uses the same header and left nav.
+        Logo: <strong>CNKI</strong><span style="color:#2f6fed">AI</span>.
+        Header: Guide · Language (icon) · Account.
+        Institution example: <strong>CNKI University</strong>.
+      </p>
       <nav>
         <a href="#req1">1. Identity &amp; Dashboard</a>
         <a href="#req2">2. Source Settings</a>
@@ -151,15 +105,14 @@
       <div class="tag">Requirement 1 · 2 screens</div>
       <h2>Campus identity &amp; school dashboard</h2>
       <p class="desc">Auto-link on campus IP; one-tap institution link off campus; home becomes a school discovery dashboard.</p>
-      <ul class="points">
-        <li>On campus: IP detects and binds the institution</li>
-        <li>Off campus: link your CNKI account once</li>
-        <li>Dashboard shows faculty papers, new theses, and research trends</li>
-      </ul>
+      <p class="links">
+        <a href="pages/req1-identity-bind.html">Open HTML 1-1</a>
+        <a href="pages/req1-school-dashboard.html">Open HTML 1-2</a>
+      </p>
       <div class="gallery">
         <figure>
           <img src="images/req1-identity-bind.png" alt="Link institution account" />
-          <figcaption><strong>1-1</strong> Off-campus modal: link your institution account in one step.</figcaption>
+          <figcaption><strong>1-1</strong> Off-campus modal: link CNKI University in one step.</figcaption>
         </figure>
         <figure>
           <img src="images/req1-school-dashboard.png" alt="School discovery dashboard" />
@@ -171,16 +124,12 @@
     <section id="req2">
       <div class="tag">Requirement 2 · 1 screen</div>
       <h2>Source settings for scoped answers</h2>
-      <p class="desc">Let users choose campus sources before asking, so generation stays within selected collections.</p>
-      <ul class="points">
-        <li>Open Source Settings under the input</li>
-        <li>Toggle IR, Special Collections, Department Corpus</li>
-        <li>Model retrieval shrinks to the selected campus scope</li>
-      </ul>
+      <p class="desc">Choose campus sources before asking so generation stays within selected collections.</p>
+      <p class="links"><a href="pages/req2-literature-settings.html">Open HTML 2-1</a></p>
       <div class="gallery">
         <figure>
           <img src="images/req2-literature-settings.png" alt="Source settings panel" />
-          <figcaption><strong>2-1</strong> Source Settings panel: open knowledge vs campus sources.</figcaption>
+          <figcaption><strong>2-1</strong> Source Settings: open knowledge vs CNKI University campus sources.</figcaption>
         </figure>
       </div>
     </section>
@@ -189,19 +138,18 @@
       <div class="tag">Requirement 3 · 2 screens</div>
       <h2>Dual-column source tracing</h2>
       <p class="desc">Grounded answer on the left; matching source cards on the right; jump to the exact PDF passage.</p>
-      <ul class="points">
-        <li>Citations with school markers in the answer</li>
-        <li>Hover/click a marker to highlight the source card</li>
-        <li>Open Source jumps to the cited paragraph</li>
-      </ul>
+      <p class="links">
+        <a href="pages/req3-dual-column-trace.html">Open HTML 3-1</a>
+        <a href="pages/req3-pdf-source-highlight.html">Open HTML 3-2</a>
+      </p>
       <div class="gallery">
         <figure>
           <img src="images/req3-dual-column-trace.png" alt="Dual-column source tracing" />
-          <figcaption><strong>3-1</strong> Grounded Answer + Sources; citations keep [1][2], school badge only for CNKI University.</figcaption>
+          <figcaption><strong>3-1</strong> Citations keep [1][2]; school badge only for CNKI University.</figcaption>
         </figure>
         <figure>
           <img src="images/req3-pdf-source-highlight.png" alt="Exact PDF source highlight" />
-          <figcaption><strong>3-2</strong> Exact Source view: PDF passage highlighted for citation [2].</figcaption>
+          <figcaption><strong>3-2</strong> Exact Source view with highlighted paragraph for citation [2].</figcaption>
         </figure>
       </div>
     </section>
@@ -209,19 +157,19 @@
     <section id="req4">
       <div class="tag">Requirement 4 · 2 screens</div>
       <h2>Entity guidance &amp; scholar profile</h2>
-      <p class="desc">Suggest people, labs, and collections as users type; open a rich scholar profile instead of a flat result list.</p>
-      <ul class="points">
-        <li>Prompt guide for authors, labs, and collections</li>
-        <li>Scholar profile: timeline, keywords, grants, collaboration map</li>
-      </ul>
+      <p class="desc">Suggest people, labs, and collections as users type; open a scholar profile instead of a flat list.</p>
+      <p class="links">
+        <a href="pages/req4-entity-prompt-guide.html">Open HTML 4-1</a>
+        <a href="pages/req4-scholar-portrait.html">Open HTML 4-2</a>
+      </p>
       <div class="gallery">
         <figure>
           <img src="images/req4-entity-prompt-guide.png" alt="Suggested entities" />
-          <figcaption><strong>4-1</strong> Suggested entities while typing a name or lab.</figcaption>
+          <figcaption><strong>4-1</strong> Suggested entities while typing a CNKI University name or lab.</figcaption>
         </figure>
         <figure>
           <img src="images/req4-scholar-portrait.png" alt="Scholar profile" />
-          <figcaption><strong>4-2</strong> Scholar Profile built from campus IR records.</figcaption>
+          <figcaption><strong>4-2</strong> Scholar Profile built from CNKI University IR records.</figcaption>
         </figure>
       </div>
     </section>
@@ -229,12 +177,8 @@
     <section id="req5">
       <div class="tag">Requirement 5 · 1 screen</div>
       <h2>AI reading companion</h2>
-      <p class="desc">Read campus theses or special collections with a persistent assistant for summary and follow-ups.</p>
-      <ul class="points">
-        <li>Right rail: AI Summary and outline</li>
-        <li>Select text and Ask for context-aware follow-ups</li>
-        <li>Sessions save to the personal dashboard</li>
-      </ul>
+      <p class="desc">Read campus theses with a persistent assistant for summary and follow-ups.</p>
+      <p class="links"><a href="pages/req5-ai-companion-reading.html">Open HTML 5-1</a></p>
       <div class="gallery">
         <figure>
           <img src="images/req5-ai-companion-reading.png" alt="AI reading companion" />

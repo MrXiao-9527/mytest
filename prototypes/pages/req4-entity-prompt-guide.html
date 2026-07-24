@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>CNKI AI · Entity Guidance</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../css/app.css" />
+</head>
+<body data-active="qa">
+  <div class="app" id="app"></div>
+  <div id="page" hidden>
+    <div class="center-stage" style="padding-top:72px;">
+      <h1 class="h1" style="text-align:center;">Find people, labs, and collections</h1>
+      <p class="sub" style="text-align:center;margin-bottom:18px;">Type a name at CNKI University to get structured entity suggestions.</p>
+      <div class="ask-bar">
+        <input value="Zhang" readonly />
+        <button class="btn">Ask</button>
+      </div>
+      <section class="panel entity-dropdown">
+        <div class="entity-row"><span class="type">Author</span><span>Zhang San · CNKI University Computer Science</span></div>
+        <div class="entity-row"><span class="type">Author</span><span>Zhang Wei · CNKI University Information Engineering</span></div>
+        <div class="entity-row"><span class="type">Lab</span><span>Intelligent Networks Key Lab · CNKI University</span></div>
+        <div class="entity-row"><span class="type">Collection</span><span>East Asia Special Archive · CNKI University</span></div>
+      </section>
+    </div>
+  </div>
+  <script src="../js/shell.js"></script>
+</body>
+</html>
