@@ -28,13 +28,13 @@ node scripts/capture.mjs
 
 ## Screens
 
-| Requirement | HTML | PNG |
-|-------------|------|-----|
-| 1. Identity & dashboard | `pages/req1-identity-bind.html` | `images/req1-identity-bind.png` |
-| | `pages/req1-school-dashboard.html` | `images/req1-school-dashboard.png` |
-| 2. Source settings | `pages/req2-literature-settings.html` | `images/req2-literature-settings.png` |
-| 3. Source tracing | `pages/req3-dual-column-trace.html` | `images/req3-dual-column-trace.png` |
-| | `pages/req3-pdf-source-highlight.html` | `images/req3-pdf-source-highlight.png` |
-| 4. Entity guidance | `pages/req4-entity-prompt-guide.html` | `images/req4-entity-prompt-guide.png` |
-| | `pages/req4-scholar-portrait.html` | `images/req4-scholar-portrait.png` |
-| 5. AI reading | `pages/req5-ai-companion-reading.html` | `images/req5-ai-companion-reading.png` |
+| # | File | What it shows |
+|---|------|----------------|
+| 1-1 | `req1-identity-bind` | Off-campus: one-click link to CNKI University account |
+| 1-2 | `req1-school-dashboard` | After linking: school dashboard with campus publications, theses, and trends |
+| 2-1 | `req2-literature-settings` | Source Settings: limit answers to selected campus libraries |
+| 3-1 | `req3-dual-column-trace` | Dual-column view: grounded answer with citations, linked campus sources |
+| 3-2 | `req3-pdf-source-highlight` | Open a citation to jump to the exact highlighted passage in the PDF |
+| 4-1 | `req4-entity-prompt-guide` | While typing, suggest campus authors, labs, and collections |
+| 4-2 | `req4-scholar-portrait` | Select an author to open a campus scholar profile |
+| 5-1 | `req5-ai-companion-reading` | AI reading workspace: summarize, ask on selection, save to dashboard |
