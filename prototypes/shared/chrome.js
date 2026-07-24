@@ -59,9 +59,9 @@
     main.className = "main";
     const slot = document.getElementById("screen");
     if (slot) {
-      main.appendChild(slot);
       slot.hidden = false;
-      slot.removeAttribute("id");
+      slot.classList.add("screen");
+      main.appendChild(slot);
     }
 
     app.appendChild(header);
