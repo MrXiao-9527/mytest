@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>CNKI AI · School Dashboard</title>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Serif:wght@600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../shared/chrome.css" />
+  <style>
+    #screen { padding: 24px 28px 96px; }
+    .toast {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: #e8f8ef;
+      color: #147a45;
+      border: 1px solid #c8ecd6;
+      border-radius: 8px;
+      padding: 8px 12px;
+      font-size: 13px;
+      font-weight: 500;
+      margin-bottom: 18px;
+    }
+    .hero {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 24px;
+      margin-bottom: 20px;
+    }
+    .hero h1 {
+      margin: 0;
+      font-size: 34px;
+      letter-spacing: -0.02em;
+    }
+    .hero h1 span { color: var(--blue); }
+    .hero p { margin: 6px 0 0; color: var(--muted); font-size: 16px; }
+    .school {
+      text-align: right;
+      color: var(--blue);
+      font-family: "IBM Plex Serif", serif;
+    }
+    .school .name { font-size: 22px; font-weight: 600; }
+    .school .motto { font-size: 12px; color: #7a8799; margin-top: 4px; font-family: "IBM Plex Sans", sans-serif; }
+    .grid {
+      display: grid;
+      grid-template-columns: 1.1fr 1fr 0.9fr;
+      gap: 16px;
+    }
+    .panel { padding: 16px; min-height: 360px; }
+    .panel h3 {
+      margin: 0 0 12px;
+      font-size: 15px;
+      display: flex;
+      justify-content: space-between;
+    }
+    .panel h3 a { color: var(--blue); font-size: 12px; font-weight: 500; text-decoration: none; }
+    .item { display: flex; gap: 10px; padding: 10px 0; border-top: 1px solid #eef2f7; }
+    .item:first-of-type { border-top: none; }
+    .thumb {
+      width: 44px; height: 56px; border-radius: 4px;
+      background: linear-gradient(160deg, #dbe7ff, #9db7ef);
+      flex: 0 0 auto;
+    }
+    .doc {
+      width: 28px; height: 34px; border-radius: 4px;
+      background: var(--blue-soft); color: var(--blue);
+      display: grid; place-items: center; font-size: 12px; font-weight: 700;
+      flex: 0 0 auto;
+    }
+    .meta { font-size: 13px; }
+    .meta .t { font-weight: 600; margin-bottom: 4px; }
+    .meta .s { color: var(--muted); font-size: 12px; }
+    .trend { display: flex; justify-content: space-between; align-items: center; margin: 10px 0; font-size: 13px; }
+    .bar { height: 8px; border-radius: 999px; background: #edf2ff; flex: 1; margin: 0 10px; overflow: hidden; }
+    .bar i { display: block; height: 100%; background: var(--blue); border-radius: 999px; }
+    .ask {
+      position: absolute; left: 50%; bottom: 20px; transform: translateX(-50%);
+      width: min(860px, calc(100% - 48px));
+      background: #fff; border: 1px solid #d7e2ef; border-radius: 28px;
+      padding: 10px 12px 10px 18px; display: flex; align-items: center; gap: 10px;
+      box-shadow: 0 10px 30px rgba(30,60,110,.08);
+    }
+    .ask input {
+      flex: 1; border: none; outline: none; font-size: 14px; background: transparent; color: var(--ink);
+    }
+    .ask .send {
+      width: 40px; height: 40px; border-radius: 50%; background: var(--blue); color: #fff;
+      display: grid; place-items: center; font-size: 16px;
+    }
+  </style>
+</head>
+<body data-active="qa">
+  <div id="screen" hidden>
+    <div class="toast">✓ Campus IP linked CNKI University automatically.</div>
+    <div class="hero">
+      <div>
+        <h1>Hi, I'm <span>CNKI AI</span></h1>
+        <p>Your School Discovery Dashboard</p>
+      </div>
+      <div class="school">
+        <div class="name">CNKI University</div>
+        <div class="motto">Knowledge · Innovation · Impact</div>
+      </div>
+    </div>
+    <div class="grid">
+      <section class="card panel">
+        <h3>Latest Faculty Publications <a href="#">More ›</a></h3>
+        <div class="item"><div class="thumb"></div><div class="meta"><div class="t">A Hybrid Model for Urban Sustainability Assessment</div><div class="s">Journal of Materials Science · Wei Zhang · May 2025</div></div></div>
+        <div class="item"><div class="thumb"></div><div class="meta"><div class="t">Knowledge Graphs for Campus IR Discovery</div><div class="s">Digital Libraries Review · Li Ming · Apr 2025</div></div></div>
+        <div class="item"><div class="thumb"></div><div class="meta"><div class="t">Low-Carbon Pathways in Regional Innovation</div><div class="s">Energy Policy Letters · Chen Yu · Mar 2025</div></div></div>
+      </section>
+      <section class="card panel">
+        <h3>New Theses <a href="#">More ›</a></h3>
+        <div class="item"><div class="doc">PDF</div><div class="meta"><div class="t">Digital Economy and Total Factor Productivity</div><div class="s">PhD · School of Economics · 2025-05-12</div></div></div>
+        <div class="item"><div class="doc">PDF</div><div class="meta"><div class="t">Adaptive Learning in Smart Classrooms</div><div class="s">Master · School of Education · 2025-05-08</div></div></div>
+        <div class="item"><div class="doc">PDF</div><div class="meta"><div class="t">Heritage Archives and AI Annotation</div><div class="s">Master · School of Humanities · 2025-04-30</div></div></div>
+      </section>
+      <section class="card panel">
+        <h3>Research Trends <a href="#">More ›</a></h3>
+        <div class="trend"><span>Artificial Intelligence</span><div class="bar"><i style="width:92%"></i></div></div>
+        <div class="trend"><span>New Energy Materials</span><div class="bar"><i style="width:78%"></i></div></div>
+        <div class="trend"><span>Digital Economy</span><div class="bar"><i style="width:70%"></i></div></div>
+        <div class="trend"><span>Public Health</span><div class="bar"><i style="width:58%"></i></div></div>
+        <div class="trend"><span>Smart Cities</span><div class="bar"><i style="width:46%"></i></div></div>
+      </section>
+    </div>
+    <div class="ask">
+      <input value="" placeholder="Ask anything about CNKI University..." readonly />
+      <div class="send">➤</div>
+    </div>
+  </div>
+  <script src="../shared/chrome.js"></script>
+</body>
+</html>
