@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>CNKI AI · Entity Guidance</title>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../shared/chrome.css" />
+  <style>
+    .screen {
+      min-height: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 80px 24px 40px;
+      background: #ffffff;
+    }
+    h1 { margin: 0; font-size: 32px; letter-spacing: -0.02em; }
+    .sub { margin: 8px 0 24px; color: var(--muted); font-size: 15px; }
+    .search {
+      width: min(720px, 100%);
+      background: #fff;
+      border: 1px solid #d7e2ef;
+      border-radius: 14px;
+      padding: 10px 10px 10px 16px;
+      display: flex;
+      gap: 10px;
+      align-items: center;
+      box-shadow: 0 10px 28px rgba(30,60,110,.06);
+    }
+    .search input {
+      flex: 1; border: none; outline: none; font-size: 16px; font-weight: 600;
+    }
+    .list {
+      width: min(720px, 100%);
+      margin-top: 10px;
+      background: #fff;
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      overflow: hidden;
+    }
+    .row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 14px 16px;
+      border-top: 1px solid #eef2f7;
+      font-size: 14px;
+    }
+    .row:first-child { border-top: none; }
+    .tag {
+      background: var(--blue-soft);
+      color: var(--blue);
+      border-radius: 999px;
+      padding: 3px 10px;
+      font-size: 12px;
+      font-weight: 600;
+    }
+  </style>
+</head>
+<body data-active="qa">
+  <div id="screen" class="screen" hidden>
+    <h1>Find people, labs, and collections</h1>
+    <p class="sub">Type a name at CNKI University to get structured entity suggestions.</p>
+    <div class="search">
+      <input value="Zhang" readonly />
+      <button class="btn">Ask</button>
+    </div>
+    <div class="list">
+      <div class="row"><span>Zhang San · CNKI University Computer Science</span><span class="tag">Author</span></div>
+      <div class="row"><span>Zhang Wei · CNKI University Information Engineering</span><span class="tag">Author</span></div>
+      <div class="row"><span>Intelligent Networks Key Lab · CNKI University</span><span class="tag">Lab</span></div>
+      <div class="row"><span>East Asia Special Archive · CNKI University</span><span class="tag">Collection</span></div>
+    </div>
+  </div>
+  <script src="../shared/chrome.js"></script>
+</body>
+</html>

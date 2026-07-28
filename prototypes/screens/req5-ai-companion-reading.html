@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>CNKI AI · Reading Companion</title>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../shared/chrome.css" />
+  <style>
+    .screen {
+      display: grid;
+      grid-template-columns: 1.35fr 0.9fr;
+      gap: 14px;
+      padding: 16px;
+      min-height: 100%;
+    }
+    .doc { padding: 0; overflow: hidden; display: flex; flex-direction: column; }
+    .doc-top {
+      padding: 12px 16px;
+      border-bottom: 1px solid var(--line);
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 13px;
+    }
+    .doc-top .title { font-weight: 600; flex: 1; }
+    .toolbar {
+      padding: 8px 16px;
+      border-bottom: 1px solid var(--line);
+      color: var(--muted);
+      font-size: 12px;
+      display: flex;
+      gap: 14px;
+    }
+    .pages {
+      padding: 22px 28px 28px;
+      font-size: 14px;
+      line-height: 1.75;
+      color: #314357;
+      position: relative;
+    }
+    .pages h3 { margin: 0 0 12px; color: var(--ink); }
+    .sel { background: #dce9ff; }
+    .ask-float {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      margin-top: 8px;
+      background: #fff;
+      border: 1px solid #d7e2ef;
+      border-radius: 8px;
+      padding: 6px 10px;
+      color: var(--blue);
+      font-size: 12px;
+      font-weight: 700;
+      box-shadow: 0 6px 16px rgba(30,60,110,.08);
+    }
+    .assistant { padding: 14px 16px; display: flex; flex-direction: column; gap: 12px; }
+    .assistant-head {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 10px;
+    }
+    .assistant-head h2 { margin: 0; font-size: 18px; }
+    .save {
+      background: var(--blue);
+      color: #fff;
+      border: none;
+      border-radius: 8px;
+      padding: 10px 14px;
+      font-size: 13px;
+      font-weight: 700;
+      box-shadow: 0 8px 18px rgba(47,111,237,.28);
+      white-space: nowrap;
+    }
+    .tabs { display: flex; gap: 14px; border-bottom: 1px solid var(--line); }
+    .tabs span { padding: 0 0 8px; font-size: 13px; color: var(--muted); font-weight: 600; }
+    .tabs .on { color: var(--blue); border-bottom: 2px solid var(--blue); }
+    .summary { font-size: 13px; color: #314357; line-height: 1.6; }
+    .outline { font-size: 13px; color: #4b5563; }
+    .outline .cur { color: var(--blue); font-weight: 600; }
+    .chat {
+      margin-top: auto;
+      border-top: 1px solid var(--line);
+      padding-top: 12px;
+    }
+    .chat h4 { margin: 0 0 8px; font-size: 13px; }
+    .bubble {
+      background: #f5f7fa;
+      border-radius: 10px;
+      padding: 10px 12px;
+      font-size: 13px;
+      margin-bottom: 8px;
+      line-height: 1.55;
+    }
+    .bubble.user { background: var(--blue-soft); color: #1e3a8a; }
+    .composer {
+      display: flex; gap: 8px; margin-top: 8px;
+    }
+    .composer input {
+      flex: 1; border: 1px solid var(--line); border-radius: 8px; padding: 9px 10px; font-size: 13px;
+    }
+  </style>
+</head>
+<body data-active="reading">
+  <div id="screen" class="screen" hidden>
+    <section class="card doc">
+      <div class="doc-top">
+        <span>‹</span>
+        <div class="title">Research on the Influencing Factors of College Students' Academic Engagement</div>
+        <span class="chip">PDF</span>
+      </div>
+      <div class="toolbar"><span>Page 23 / 162</span><span>Zoom 100%</span><span>Find</span></div>
+      <div class="pages">
+        <h3>Chapter 2 Literature Review</h3>
+        <p>2.2 Influencing Factors of Academic Engagement</p>
+        <p>Prior studies suggest that <span class="sel">self-efficacy, learning motivation, and perceived social support have been widely discussed in the literature.</span></p>
+        <div class="ask-float">✦ Ask</div>
+        <p>These constructs interact with instructional design and campus resources, shaping how students sustain engagement across courses and research tasks.</p>
+      </div>
+    </section>
+    <section class="card assistant">
+      <div class="assistant-head">
+        <h2>Reading Assistant</h2>
+        <button class="save">Save to My Dashboard</button>
+      </div>
+      <div class="tabs">
+        <span class="on">AI Summary</span>
+        <span>Outline</span>
+        <span>Key Points</span>
+      </div>
+      <div class="summary">
+        This chapter synthesizes research on academic engagement drivers, highlighting self-efficacy, motivation, and social support as recurring predictors in campus-based studies.
+      </div>
+      <div class="outline">
+        <div>2.1 Definitions</div>
+        <div class="cur">2.2 Influencing Factors of Academic Engagement</div>
+        <div>2.3 Measurement Approaches</div>
+        <div>2.4 Research Gaps</div>
+      </div>
+      <div class="chat">
+        <h4>Chat with AI (campus knowledge)</h4>
+        <div class="bubble user">How do self-efficacy and learning motivation affect academic engagement?</div>
+        <div class="bubble">Based on CNKI University sources, higher self-efficacy strengthens persistence, while motivation mediates study strategies and engagement intensity.</div>
+        <div class="composer">
+          <input placeholder="Ask a follow-up question..." readonly />
+          <button class="btn">➤</button>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script src="../shared/chrome.js"></script>
+</body>
+</html>

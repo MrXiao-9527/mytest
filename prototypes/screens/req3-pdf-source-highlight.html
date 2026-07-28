@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>CNKI AI · Exact Source</title>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../shared/chrome.css" />
+  <style>
+    .screen {
+      display: grid;
+      grid-template-columns: 1.5fr 0.75fr;
+      gap: 16px;
+      padding: 20px;
+      min-height: 100%;
+    }
+    .doc, .side { padding: 18px 20px; }
+    .doc-head {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 14px;
+    }
+    .doc-head h2 { margin: 0; font-size: 18px; }
+    .page { color: var(--muted); font-size: 13px; margin-bottom: 10px; }
+    .doc h3 { margin: 0 0 12px; font-size: 16px; }
+    .doc p { font-size: 14px; line-height: 1.75; color: #314357; margin: 0 0 12px; }
+    .hl { background: #fff3b0; padding: 1px 2px; }
+    .side h2 { margin: 0 0 12px; font-size: 18px; }
+    .source-card {
+      border: 1px solid var(--blue);
+      background: #f5f9ff;
+      border-radius: 10px;
+      padding: 14px;
+    }
+    .source-card .t { font-weight: 700; color: var(--blue); margin-bottom: 8px; font-size: 14px; }
+    .source-card .m { font-size: 12px; color: var(--muted); margin-bottom: 10px; }
+    .source-card .n { font-size: 12px; color: #4b5563; }
+  </style>
+</head>
+<body data-active="reading">
+  <div id="screen" class="screen" hidden>
+    <section class="card doc">
+      <div class="doc-head">
+        <h2>Exact Source · Citation [2]</h2>
+        <span class="chip">CNKI University Thesis</span>
+      </div>
+      <div class="page">Page 46 / 162</div>
+      <h3>3.2 Infrastructure and Talent Gaps</h3>
+      <p>Digital programs often stall when infrastructure upgrades outpace workforce readiness. Organizations may deploy platforms quickly, yet lack the specialists required to operate them securely and at scale.</p>
+      <p><span class="hl">Talent shortages in data engineering and cybersecurity remain the primary bottleneck for sustained transformation outcomes at scale.</span></p>
+      <p>Addressing this gap requires coordinated investment in training, cross-functional teams, and long-term talent pipelines aligned with campus research strengths.</p>
+    </section>
+    <section class="card side">
+      <h2>Source Card</h2>
+      <div class="source-card">
+        <div class="t">[2] Key Challenges in Enterprise Digital Transformation</div>
+        <div class="m">Wang Chen · School of Business, CNKI University · 2022</div>
+        <div class="n">Matched paragraph highlighted on the left.</div>
+      </div>
+    </section>
+  </div>
+  <script src="../shared/chrome.js"></script>
+</body>
+</html>

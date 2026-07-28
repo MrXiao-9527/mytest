@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>CNKI AI Personalized Prototypes</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Serif:wght@600&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --bg: #ffffff;
+      --ink: #152033;
+      --muted: #5b6b80;
+      --line: #d7e2ef;
+      --blue: #2f6fed;
+      --panel: #ffffff;
+      --soft: #e8f1ff;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: "IBM Plex Sans", sans-serif;
+      color: var(--ink);
+      background: var(--bg);
+      line-height: 1.6;
+    }
+    .wrap { max-width: 1100px; margin: 0 auto; padding: 48px 24px 80px; }
+    header { margin-bottom: 40px; }
+    header h1 {
+      font-family: "IBM Plex Serif", serif;
+      font-size: clamp(1.8rem, 3vw, 2.4rem);
+      margin: 0 0 12px;
+    }
+    header p { margin: 0; color: var(--muted); max-width: 760px; }
+    nav { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 24px; }
+    nav a {
+      text-decoration: none;
+      color: var(--blue);
+      background: var(--soft);
+      border: 1px solid #c9ddff;
+      padding: 8px 12px;
+      border-radius: 8px;
+      font-size: 0.92rem;
+      font-weight: 500;
+    }
+    section {
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: 16px;
+      padding: 28px;
+      margin-bottom: 28px;
+      box-shadow: 0 10px 30px rgba(30, 60, 110, 0.04);
+    }
+    .tag {
+      display: inline-block;
+      font-size: 0.78rem;
+      font-weight: 600;
+      color: var(--blue);
+      background: var(--soft);
+      padding: 4px 10px;
+      border-radius: 999px;
+      margin-bottom: 10px;
+    }
+    h2 { margin: 0 0 8px; font-size: 1.35rem; }
+    .desc { color: var(--muted); margin: 0 0 12px; font-size: 0.95rem; }
+    .links { margin: 0 0 18px; font-size: 0.9rem; }
+    .links a { margin-right: 12px; }
+    .gallery { display: grid; gap: 20px; }
+    figure { margin: 0; }
+    figure img {
+      width: 100%;
+      border-radius: 12px;
+      border: 1px solid var(--line);
+      background: #fff;
+      display: block;
+    }
+    figcaption { margin-top: 10px; font-size: 0.9rem; color: var(--muted); }
+    figcaption strong { color: var(--ink); font-weight: 600; }
+    code { font-size: 0.9em; }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <h1>CNKI AI Personalized Prototypes</h1>
+      <p>
+        Screens are rendered from a shared HTML shell so every page uses the same header and left nav.
+        Logo: <strong>CNKI</strong><span style="color:#2f6fed">AI</span>.
+        Header: Guide · Language (icon) · Account.
+        Institution example: <strong>CNKI University</strong>.
+      </p>
+      <nav>
+        <a href="#req1">1. Identity &amp; Dashboard</a>
+        <a href="#req2">2. Source Settings</a>
+        <a href="#req3">3. Source Tracing</a>
+        <a href="#req4">4. Entity Guidance</a>
+        <a href="#req5">5. AI Reading</a>
+      </nav>
+    </header>
+
+    <section id="req1">
+      <div class="tag">Requirement 1 · 2 screens</div>
+      <h2>Campus identity &amp; school dashboard</h2>
+      <p class="desc">Auto-link on campus IP; one-tap institution link off campus; home becomes a school discovery dashboard.</p>
+      <p class="links">
+        <a href="pages/req1-identity-bind.html">Open HTML 1-1</a>
+        <a href="pages/req1-school-dashboard.html">Open HTML 1-2</a>
+      </p>
+      <div class="gallery">
+        <figure>
+          <img src="images/req1-identity-bind.png" alt="Link institution account" />
+          <figcaption><strong>1-1</strong> Off-campus: one-click link to CNKI University account.</figcaption>
+        </figure>
+        <figure>
+          <img src="images/req1-school-dashboard.png" alt="School discovery dashboard" />
+          <figcaption><strong>1-2</strong> After linking: school dashboard with campus publications, theses, and trends.</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section id="req2">
+      <div class="tag">Requirement 2 · 1 screen</div>
+      <h2>Source settings for scoped answers</h2>
+      <p class="desc">Choose campus sources before asking so generation stays within selected collections.</p>
+      <p class="links"><a href="pages/req2-literature-settings.html">Open HTML 2-1</a></p>
+      <div class="gallery">
+        <figure>
+          <img src="images/req2-literature-settings.png" alt="Source settings panel" />
+          <figcaption><strong>2-1</strong> Source Settings: limit answers to selected campus libraries.</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section id="req3">
+      <div class="tag">Requirement 3 · 2 screens</div>
+      <h2>Dual-column source tracing</h2>
+      <p class="desc">Grounded answer on the left; matching source cards on the right; jump to the exact PDF passage.</p>
+      <p class="links">
+        <a href="pages/req3-dual-column-trace.html">Open HTML 3-1</a>
+        <a href="pages/req3-pdf-source-highlight.html">Open HTML 3-2</a>
+      </p>
+      <div class="gallery">
+        <figure>
+          <img src="images/req3-dual-column-trace.png" alt="Dual-column source tracing" />
+          <figcaption><strong>3-1</strong> Dual-column view: grounded answer with citations, linked campus sources.</figcaption>
+        </figure>
+        <figure>
+          <img src="images/req3-pdf-source-highlight.png" alt="Exact PDF source highlight" />
+          <figcaption><strong>3-2</strong> Open a citation to jump to the exact highlighted passage in the PDF.</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section id="req4">
+      <div class="tag">Requirement 4 · 2 screens</div>
+      <h2>Entity guidance &amp; scholar profile</h2>
+      <p class="desc">Suggest people, labs, and collections as users type; open a scholar profile instead of a flat list.</p>
+      <p class="links">
+        <a href="pages/req4-entity-prompt-guide.html">Open HTML 4-1</a>
+        <a href="pages/req4-scholar-portrait.html">Open HTML 4-2</a>
+      </p>
+      <div class="gallery">
+        <figure>
+          <img src="images/req4-entity-prompt-guide.png" alt="Suggested entities" />
+          <figcaption><strong>4-1</strong> While typing, suggest campus authors, labs, and collections.</figcaption>
+        </figure>
+        <figure>
+          <img src="images/req4-scholar-portrait.png" alt="Scholar profile" />
+          <figcaption><strong>4-2</strong> Select an author to open a campus scholar profile.</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section id="req5">
+      <div class="tag">Requirement 5 · 1 screen</div>
+      <h2>AI reading companion</h2>
+      <p class="desc">Read campus theses with a persistent assistant for summary and follow-ups.</p>
+      <p class="links"><a href="pages/req5-ai-companion-reading.html">Open HTML 5-1</a></p>
+      <div class="gallery">
+        <figure>
+          <img src="images/req5-ai-companion-reading.png" alt="AI reading companion" />
+          <figcaption><strong>5-1</strong> AI reading workspace: summarize, ask on selection, save to dashboard.</figcaption>
+        </figure>
+      </div>
+    </section>
+  </div>
+</body>
+</html>

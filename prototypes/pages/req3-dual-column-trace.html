@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>CNKI AI · Source Tracing</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../css/app.css" />
+</head>
+<body data-active="qa">
+  <div class="app" id="app"></div>
+  <div id="page" hidden>
+    <div style="margin-bottom:14px;display:flex;align-items:center;justify-content:space-between;gap:12px;">
+      <div>
+        <div class="muted" style="font-size:12px;margin-bottom:4px;">Question</div>
+        <div style="font-weight:600;">How does digital transformation affect organizational performance?</div>
+      </div>
+      <div class="chip">Demo University + CNKI sources</div>
+    </div>
+
+    <div class="split">
+      <section class="panel card answer">
+        <h2 class="h2">Grounded Answer</h2>
+        <p><strong>1. Current status.</strong> Enterprises adopt cloud, data platforms, and AI to improve process efficiency
+          <span class="cite"><span class="cite-num">[1]</span><span class="school-badge"><span class="mark">D</span>Demo University</span></span>.</p>
+        <p><strong>2. Key challenges.</strong> Gaps remain in infrastructure, talent, and data security
+          <span class="cite" style="background:#e8f1ff;border-radius:6px;padding:2px 4px;"><span class="cite-num">[2]</span><span class="school-badge"><span class="mark">C</span>CNKI</span></span>.</p>
+        <p><strong>3. Strategies.</strong> Top-level design and investment in core systems improve outcomes
+          <span class="cite"><span class="cite-num">[3]</span><span class="school-badge"><span class="mark">D</span>Demo University</span></span>.</p>
+        <p class="muted" style="font-size:12px;margin-top:18px;">Generated from Demo University campus sources and CNKI. Verify critical claims.</p>
+      </section>
+
+      <aside class="panel card">
+        <h2 class="h2">Sources</h2>
+        <div class="source-card">
+          <div><span class="num">[1]</span><span class="title">Digital Transformation Paths in Chinese Enterprises</span></div>
+          <div class="meta">Li Ming; Zhao Wei · School of Management, Demo University · 2023</div>
+        </div>
+        <div class="source-card active">
+          <div><span class="num">[2]</span><span class="title">Key Challenges in Enterprise Digital Transformation</span></div>
+          <div class="meta">Wang Chen · School of Business, CNKI · 2022</div>
+          <button class="btn" style="margin-top:10px;width:100%;" aria-label="Open source">→</button>
+        </div>
+        <div class="source-card">
+          <div><span class="num">[3]</span><span class="title">Countermeasures under the New Development Pattern</span></div>
+          <div class="meta">Zhang Yu; Liu Fang · School of Management, Demo University · 2024</div>
+        </div>
+      </aside>
+    </div>
+  </div>
+  <script src="../js/shell.js"></script>
+</body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>CNKI AI · Reading Companion</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../css/app.css" />
+</head>
+<body data-active="reading">
+  <div class="app" id="app"></div>
+  <div id="page" hidden>
+    <div class="reading">
+      <section class="panel doc">
+        <div class="doc-toolbar">
+          <div style="font-weight:600;font-size:13.5px;">Empirical Study on Academic Engagement · CNKI University</div>
+          <div class="muted">23 / 162</div>
+        </div>
+        <div class="doc-body">
+          <h2 class="h2">2.2 Influencing Factors</h2>
+          <p>Prior studies examine individual and contextual predictors of academic engagement across higher education settings.</p>
+          <p><span class="hl">Self-efficacy, learning motivation, and perceived social support have been widely discussed in the literature.</span></p>
+          <div class="ask-float">Ask</div>
+          <p style="margin-top:16px;">Campus IR records at CNKI University further connect these factors to discipline-specific learning outcomes.</p>
+        </div>
+      </section>
+
+      <aside class="panel assistant">
+        <div style="display:flex;align-items:center;justify-content:space-between;gap:10px;">
+          <h2 class="h2" style="margin:0;">Reading Assistant</h2>
+        </div>
+        <button class="btn save-cta">Save to My Dashboard</button>
+        <div>
+          <div style="font-weight:600;font-size:13px;margin-bottom:8px;color:var(--blue);">AI Summary</div>
+          <p class="sub" style="font-size:13px;">This chapter reviews core drivers of academic engagement and synthesizes evidence from psychology and education research.</p>
+        </div>
+        <div class="chat">
+          <div class="q">How do self-efficacy and motivation interact?</div>
+          <div class="a">Based on CNKI University sources, higher self-efficacy strengthens motivation, which in turn predicts deeper engagement and persistence.</div>
+        </div>
+        <div class="ask-bar" style="margin:0;">
+          <input placeholder="Ask a follow-up..." readonly />
+          <button class="btn secondary">Send</button>
+        </div>
+      </aside>
+    </div>
+  </div>
+  <script src="../js/shell.js"></script>
+</body>
+</html>

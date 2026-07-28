@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>CNKI AI · Link Institution</title>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../shared/chrome.css" />
+  <style>
+    .screen {
+      min-height: 100%;
+      display: grid;
+      place-items: center;
+      padding: 40px;
+      background: #ffffff;
+    }
+    .modal {
+      width: 520px;
+      background: #fff;
+      border: 1px solid var(--line);
+      border-radius: 16px;
+      padding: 28px 28px 24px;
+      box-shadow: 0 16px 40px rgba(31, 60, 110, 0.08);
+    }
+    .modal h1 {
+      margin: 12px 0 8px;
+      font-size: 28px;
+      letter-spacing: -0.02em;
+    }
+    .modal p { margin: 0 0 18px; color: var(--muted); font-size: 14px; }
+    .box {
+      border: 1px solid var(--line);
+      border-radius: 10px;
+      padding: 14px 16px;
+      margin-bottom: 18px;
+      background: #fafbfc;
+      font-size: 14px;
+    }
+    .box div + div { margin-top: 8px; }
+    .box strong { color: var(--blue); font-weight: 600; }
+    .btn { width: 100%; padding: 12px 16px; font-size: 15px; border-radius: 10px; }
+    .note { margin: 12px 0 0; text-align: center; color: var(--muted); font-size: 12px; }
+  </style>
+</head>
+<body data-active="qa">
+  <div id="screen" class="screen" hidden>
+    <div class="modal">
+      <span class="chip">Off Campus</span>
+      <h1>Link Your Institution</h1>
+      <p>On campus, access binds by IP. Off campus, link once to unlock school benefits.</p>
+      <div class="box">
+        <div>Signed in as: <b>alex.chen@example.com</b></div>
+        <div>Institution: <strong>CNKI University</strong></div>
+      </div>
+      <button class="btn">Link Institution Account</button>
+      <p class="note">Unlocks CNKI University campus sources and dashboard.</p>
+    </div>
+  </div>
+  <script src="../shared/chrome.js"></script>
+</body>
+</html>
